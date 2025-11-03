@@ -23,7 +23,7 @@ function ServiceRight() {
     // API 호출하여 영수증 데이터를 가져오는 함수
     const fetchReceipts = async () => {
         try {
-        const response = await axios.get("http://192.168.35.249:8080/order/show"); // 영수증 조회 API 호출
+        const response = await axios.get("/order/show"); // 영수증 조회 API 호출
         setReceipts(response.data); // 가져온 데이터를 상태에 저장
         } catch (error) {
         console.error("영수증 데이터를 가져오는 중 오류 발생:", error);
@@ -35,7 +35,7 @@ function ServiceRight() {
     const handleRowClick = async (idorder) => {
         console.log("클릭 이벤트 발생:", idorder);
         try {
-            const response = await axios.get(`http://192.168.35.249:8080/order/receipt?idorder=${idorder}`);
+            const response = await axios.get(`/order/receipt?idorder=${idorder}`);
             console.log("응답 데이터:", response.data);
             setSelectedReceipt(response.data);
             setShowPopup(true);

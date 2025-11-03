@@ -3,6 +3,8 @@
 const express = require('express');
 const dbConnect = require('./config/dbConnect');
 const cors = require('cors');
+const path = require('path');
+
 
 const app = express();
 dbConnect();
@@ -25,6 +27,15 @@ app.use("/order", require("./routes/orderRoute"));
 
 // 마감
 app.use("/close", require("./routes/closeRoute"));
+
+
+// --- React 정적 파일 제공 ---
+app.use(express.static(path.join(__dirname, "../frontend/build")));
+
+// --- SPA 라우팅 처리 (React Router 대응) ---
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "../frontend/build", "index.html"));
+});
 
 app.listen(8080, '0.0.0.0',() => {		// 8080번 포트로 서버 실행
     console.log("서버 실행")

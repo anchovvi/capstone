@@ -42,7 +42,7 @@ function MainPage() {
         };
 
         try {
-            const response = await axios.post('http://192.168.35.249:8080/order/save', orderData);
+            const response = await axios.post('/order/save', orderData);
             if (response.data.success) {
                 clearOrders(); // 주문 저장 후 주문표 비우기 
 

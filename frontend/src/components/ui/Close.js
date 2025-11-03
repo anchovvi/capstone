@@ -25,7 +25,7 @@ function Close({ inventoryItems }) {
     useEffect(() => {
         const fetchTotalSales = async () => {
           try {
-            const response = await fetch('http://192.168.35.249:8080/close/totalPrice'); 
+            const response = await fetch('/close/totalPrice'); 
             const data = await response.json();
             setTotalSales(data.totalPrice);
           } catch (error) {
@@ -39,7 +39,7 @@ function Close({ inventoryItems }) {
     useEffect(() => {
         const fetchTotalCashSales = async () => {
           try {
-            const response = await fetch('http://192.168.35.249:8080/close/totalCashPrice'); 
+            const response = await fetch('/close/totalCashPrice'); 
             const data = await response.json();
             setTotalCashSales(data.totalPrice);
           } catch (error) {
@@ -53,7 +53,7 @@ function Close({ inventoryItems }) {
     useEffect(() => {
         const fetchTotalCardSales = async () => {
           try {
-            const response = await fetch('http://192.168.35.249:8080/close/totalCardPrice'); 
+            const response = await fetch('/close/totalCardPrice'); 
             const data = await response.json();
             setTotalCardSales(data.totalPrice);
           } catch (error) {
