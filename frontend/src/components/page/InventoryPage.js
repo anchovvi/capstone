@@ -14,7 +14,7 @@ function InventoryPage() {
     useEffect(() => {
         const fetchInventory = async () => {
             try {
-                const response = await axios.get('http://192.168.35.48:8080/inventory/show');
+                const response = await axios.get('http://192.168.35.249:8080/inventory/show');
                 setInventoryItems(response.data);
             } catch (error) {
                 console.error('Error fetching inventory:', error);

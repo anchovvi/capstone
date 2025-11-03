@@ -19,7 +19,7 @@ function PosRight({ addOrder, handleCashButtonClick, handleCreditCardButtonClick
     // 서버에서 메뉴 아이템 데이터를 가져오는 비동기 함수
     const fetchMenuItems = async (category) => {
         try {
-            const response = await axios.get('http://192.168.35.48:8080/pos/menu', {
+            const response = await axios.get('http://192.168.35.249:8080/pos/menu', {
                 params: { category } // 선택한 카테고리를 쿼리 파라미터로 보냄
             }); 
             setMenuItems(response.data); // 응답 데이터를 상태에 설정합니다.

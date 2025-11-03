@@ -144,6 +144,7 @@ export const StyledButton = styled.button`
         font-size: 10px; /* 글자 크기 조정 */
         height: 45px; /* 높이 조정 */
     }
+
 `;
 
 export const StyledLeftFourth = styled.div`

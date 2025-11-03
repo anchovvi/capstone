@@ -30,7 +30,7 @@ function InvenRight({ addItemToInventory }) {
 
     // 확인 버튼 함수 누르면 db에 저장하기
     const handleConfirm = () => {
-        axios.post("http://192.168.35.48:8080/inventory/save", {
+        axios.post("http://192.168.35.249:8080/inventory/save", {
             idinventory: popup.item,
             quantity: popup.quantity
         })
