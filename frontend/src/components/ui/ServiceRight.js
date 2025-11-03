@@ -31,6 +31,7 @@ function ServiceRight() {
     };
 
 
+    
     // 테이블 행 클릭 시 팝업을 표시하고 선택한 영수증 데이터를 설정하는 함수
     const handleRowClick = async (idorder) => {
         console.log("클릭 이벤트 발생:", idorder);
