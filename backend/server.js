@@ -13,7 +13,7 @@ dbConnect();
 app.use(express.json());
 
 app.use(cors({
-    origin: ['http://localhost:3000', 'http://192.168.35.249:3000'],
+    origin: ['http://localhost:3000', 'http://192.168.35.89:3000'],
     credentials: true,
 }));
 
